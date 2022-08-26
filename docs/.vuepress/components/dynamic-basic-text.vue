@@ -26,6 +26,10 @@
     <div class="hollow hollow6">
       <div class="hollow6-child">不带走一片云彩</div>
     </div>
+    <h4>故障效果</h4>
+    <div class="hollow hollow7" data-text="徐志摩">
+      徐志摩
+    </div>
   </div>
 </template>
 
@@ -122,6 +126,23 @@ $FS: 50px;
     width: 7em;
   }
 }
+@keyframes shine7-before{
+  0% {
+      clip-path: inset(0 0 0 0);
+  }
+  100% {
+      clip-path: inset(.62em 0 .29em 0);
+  }
+}
+
+@keyframes shine8-after{
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(.29em 0 .62em 0);
+  }
+}
 .dynamic-basic-text {
   .hollow {
     margin: 30px 0;
@@ -194,7 +215,38 @@ $FS: 50px;
       animation: shine6 2s steps(42, end) infinite;
       word-break: break-all;
       overflow: hidden;
+      margin: 0 auto;
     }    
+  }
+  .hollow7 {
+    background: #000;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    font-size: $FS;
+    font-weight: 600;
+    padding: 0 4px;
+    color: white;
+    position: relative;
+    width: 100%;
+    &::before {
+      content: attr(data-text);
+      position: absolute;
+      left: -2px;
+      width: 100%;
+      background: black;
+      text-shadow:2px 0 #f00;
+      animation: shine7-before 3s infinite linear alternate-reverse;
+    }   
+    &::after {
+      content: attr(data-text);
+      position: absolute;
+      left: -2px;
+      width: 100%;
+      background: black;
+      text-shadow: -2px 0 #f00;
+      animation: shine7-after 3s infinite linear alternate-reverse;
+    }   
   }
 }
 </style>
