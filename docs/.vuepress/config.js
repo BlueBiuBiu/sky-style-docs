@@ -31,7 +31,8 @@ module.exports = {
         path: '/pages/dynamic/basic_text.md',
         collapsable: false,
         children: [
-          '/pages/dynamic/basic_text.md'
+          '/pages/dynamic/basic_text.md',
+          '/pages/dynamic/hover_text.md',
         ]
       }
     ]

@@ -1,4 +1,4 @@
-## 动态效果 
+## 基础动态 
 
 <dynamic-basic-text/>
 
