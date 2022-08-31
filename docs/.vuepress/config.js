@@ -1,21 +1,22 @@
 module.exports = {
   title: 'sky首页',
   description: 'sky的样式大全',
+  base: '/sky-style-docs/',
   head: [
       [['link', { rel: 'icon', href: '/images/logo.jpg' }]],  
   ],
   themeConfig: {
-    logo: '/images/logo.jpg',
+    // logo: '/images/logo.jpg',
     nav: [
       { text: '首页', link: '/' },
-      {
-        text: '语言',
-        ariaLabel: '语言切换',
-        items: [
-          { text: '中文', link: '/language/chinese/' },
-          { text: 'English', link: '/language/english/' }
-        ]
-      }
+      // {
+      //   text: '语言',
+      //   ariaLabel: '语言切换',
+      //   items: [
+      //     { text: '中文', link: '/language/chinese/' },
+      //     { text: 'English', link: '/language/english/' }
+      //   ]
+      // }
     ],
     sidebar: [
       {
